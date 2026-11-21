@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web2 Loja</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="pageHeader">
+            <p class="subtitle">DESENVOLVIMENTO WEB 2</p>
+            <h1>Web2 Loja</h1>
+            <p>Gerenciamento de produtos e categorias</p>
+        </header>
+
+        <section class="contentSection">
+
+            <div class="sectionHeader">
+                <h2>Produtos</h2>
+            </div>
+
+            <form id="searchForm" class="searchForm">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    name="busca"
+                    placeholder="Buscar produto..."
+                >
+
+                <button type="submit">
+                    Buscar
+                </button>
+
+                <button
+                    type="button"
+                    id="clearSearch"
+                    class="secondaryButton"
+                >
+                    Limpar
+                </button>
+
+            </form>
+
+            <p id="productMessage" class="message"></p>
+
+            <div class="tableContainer">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Produto</th>
+                            <th>Categoria</th>
+                            <th>Preço</th>
+                            <th>Estoque</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="productTable">
+                        <tr>
+                            <td colspan="6">
+                                Carregando produtos...
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section class="contentSection">
+
+            <div class="sectionHeader">
+                <h2>Categorias</h2>
+            </div>
+
+            <form id="categoryForm" class="categoryForm">
+
+                <input
+                    type="text"
+                    id="categoryName"
+                    name="nome"
+                    maxlength="100"
+                    placeholder="Nome da categoria"
+                    required
+                >
+
+                <button type="submit">
+                    Cadastrar
+                </button>
+
+            </form>
+
+            <p id="categoryMessage" class="message"></p>
+
+            <ul id="categoryList" class="categoryList"></ul>
+
+        </section>
+
+        <footer>
+            <p>Atividade acadêmica - Desenvolvimento Web 2</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
